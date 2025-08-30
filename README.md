@@ -49,7 +49,7 @@ run -all
 Below is a waveform captured using **QuestaSim**, showing the write and read operations on the RAM.  
 The simulation confirms correct memory behavior across different clock cycles.
 
-![Simulation Waveform](https://github.com/Eng-AbdallahSabah/Single-Port-RAM-RTL/blob/main/doc/Wave%20form.png)
+![Simulation Waveform](doc/Wave.png)
 4.Check simulation log in results/report.txt.
 
 📊 Coverage & Results
@@ -77,4 +77,3 @@ Building a reference model and scoreboard for result checking.
 Applying assertions and coverage-driven verification.
 
 Structuring an academic/industry-standard verification project.
-```
