@@ -44,15 +44,14 @@ results/ -> Simulation outputs and logs
 3.Run simulation:
 vsim work.top -coverage
 run -all
-## 📊 Simulation Waveform
 
-Below is a waveform captured using **QuestaSim**, showing the write and read operations on the RAM.  
-The simulation confirms correct memory behavior across different clock cycles.
-
-![Simulation Waveform](doc/Wave.png)
 4.Check simulation log in results/report.txt.
 
-📊 Coverage & Results
+
+---
+
+
+## 📊 Coverage & Results
 
 Achieved functional coverage > 95% across FIFO operations.
 
@@ -68,7 +67,18 @@ Reset under active traffic
 
 Coverage reports are available in coverage/.
 
-📚 Learning Outcomes
+---
+
+## 📊 Simulation Waveform
+
+Below is a waveform captured using **QuestaSim**, showing the write and read operations on the RAM.  
+The simulation confirms correct memory behavior across different clock cycles.
+
+![Simulation Waveform](doc/Wave.png)
+
+---
+
+## 📚 Learning Outcomes
 
 Practical experience in UVM testbench development.
 
