@@ -1,0 +1,213 @@
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# vsim -voptargs="+acc" work.top -classdebug -uvmcontrol=all -coverage -do "add wave -position insertpoint sim:/top/fifo_vif/*; coverage save top.ucdb -onexit; run -all; vcover report top.ucdb -details -annotate -all -output coverage_rpt_final.txt; quit" 
+# Start time: 01:40:02 on Aug 31,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fifo_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.fifo_seq_pkg(fast)
+# Loading work.fifo_seq_pkg_reset(fast)
+# Loading work.fifo_seq_read_write(fast)
+# Loading work.fifo_seq_read(fast)
+# Loading work.fifo_seq_write(fast)
+# Loading work.fifo_scoreboard_pkg(fast)
+# Loading work.fifo_coverage_pkg(fast)
+# Loading work.fifo_sequencer_pkg(fast)
+# Loading work.fifo_monitor_pkg(fast)
+# Loading work.fifo_config_pkg(fast)
+# Loading work.fifo_driver_pkg(fast)
+# Loading work.fifo_agent_pkg(fast)
+# Loading work.fifo_env_pkg(fast)
+# Loading work.fifo_test_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.fifo_if(fast__2)
+# Loading work.FIFO_DUT(fast)
+# Loading work.fifo_assert(fast)
+# Loading work.fifo_reference_model(fast)
+# Loading C:/questasim64_2024.1/uvm-1.1d\win64\uvm_dpi.dll
+# add wave -position insertpoint sim:/top/fifo_vif/*
+#  coverage save top.ucdb -onexit
+#  run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(all)
+# UVM_INFO @ 0: reporter [RNTST] Running test fifo_test...
+# UVM_INFO test.sv(48) @ 0: uvm_test_top [run_phase] reset asserted
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+# UVM_INFO test.sv(50) @ 2: uvm_test_top [run_phase] reset deasserted
+# UVM_INFO test.sv(52) @ 2: uvm_test_top [run_phase] stimulus generation write started
+# UVM_INFO test.sv(54) @ 1002: uvm_test_top [run_phase] stimulus generation write ended
+# UVM_INFO test.sv(56) @ 1002: uvm_test_top [run_phase] stimulus generation read started
+# UVM_INFO test.sv(58) @ 2002: uvm_test_top [run_phase] stimulus generation read ended
+# UVM_INFO test.sv(60) @ 2002: uvm_test_top [run_phase] stimulus generation write_read started
+# UVM_INFO test.sv(62) @ 3002: uvm_test_top [run_phase] stimulus generation write_read ended
+# UVM_INFO test.sv(64) @ 3002: uvm_test_top [fifo_test] Running FIFO Test
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 3002: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO score_board.sv(48) @ 3002: uvm_test_top.env.score [report_phase] Total Successful transaction: 1501
+# UVM_INFO score_board.sv(49) @ 3002: uvm_test_top.env.score [report_phase] Total Failed transaction: 0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   15
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [fifo_test]     1
+# [report_phase]     2
+# [run_phase]     8
+# ** Note: $finish    : C:/questasim64_2024.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3002 ns  Iteration: 61  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_2024.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+#  vcover report top.ucdb -details -annotate -all -output coverage_rpt_final.txt
+# QuestaSim-64 vcover 2024.1 Coverage Utility 2024.02 Feb  1 2024
+# Start time: 01:41:41 on Aug 31,2025
+# vcover report top.ucdb -details -annotate -all -output coverage_rpt_final.txt 
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Error: (vcover-7) Failed to open UCDB file "top.ucdb" in read mode.
+# ** Note: (vcover-17388) No matching coverage data found in file 'top.ucdb'.
+# End time: 01:41:41 on Aug 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+#  quit
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.fifo_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.fifo_seq_pkg(fast)
+# Loading work.fifo_seq_pkg_reset(fast)
+# Loading work.fifo_seq_read_write(fast)
+# Loading work.fifo_seq_read(fast)
+# Loading work.fifo_seq_write(fast)
+# Loading work.fifo_scoreboard_pkg(fast)
+# Loading work.fifo_coverage_pkg(fast)
+# Loading work.fifo_sequencer_pkg(fast)
+# Loading work.fifo_monitor_pkg(fast)
+# Loading work.fifo_config_pkg(fast)
+# Loading work.fifo_driver_pkg(fast)
+# Loading work.fifo_agent_pkg(fast)
+# Loading work.fifo_env_pkg(fast)
+# Loading work.fifo_test_pkg(fast)
+# Loading work.top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top(fast)
+# Loading work.fifo_if(fast__2)
+# Loading work.FIFO_DUT(fast)
+# Loading work.fifo_assert(fast)
+# Loading work.fifo_reference_model(fast)
+# Loading C:/questasim64_2024.1/uvm-1.1d\win64\uvm_dpi.dll
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(all)
+# UVM_INFO @ 0: reporter [RNTST] Running test fifo_test...
+# UVM_INFO test.sv(48) @ 0: uvm_test_top [run_phase] reset asserted
+# **************************************************************************
+# * Questa UVM Transaction Recording Turned ON.                            *
+# * recording_detail has been set.                                         *
+# *  To turn off, set 'recording_detail' to off:                           *
+# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
+# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
+# **************************************************************************
+# UVM_INFO test.sv(50) @ 2: uvm_test_top [run_phase] reset deasserted
+# UVM_INFO test.sv(52) @ 2: uvm_test_top [run_phase] stimulus generation write started
+# UVM_INFO test.sv(54) @ 1002: uvm_test_top [run_phase] stimulus generation write ended
+# UVM_INFO test.sv(56) @ 1002: uvm_test_top [run_phase] stimulus generation read started
+# UVM_INFO test.sv(58) @ 2002: uvm_test_top [run_phase] stimulus generation read ended
+# UVM_INFO test.sv(60) @ 2002: uvm_test_top [run_phase] stimulus generation write_read started
+# UVM_INFO test.sv(62) @ 3002: uvm_test_top [run_phase] stimulus generation write_read ended
+# UVM_INFO test.sv(64) @ 3002: uvm_test_top [fifo_test] Running FIFO Test
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 3002: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO score_board.sv(48) @ 3002: uvm_test_top.env.score [report_phase] Total Successful transaction: 1501
+# UVM_INFO score_board.sv(49) @ 3002: uvm_test_top.env.score [report_phase] Total Failed transaction: 0
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   15
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [fifo_test]     1
+# [report_phase]     2
+# [run_phase]     8
+# ** Note: $finish    : C:/questasim64_2024.1/win64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 3002 ns  Iteration: 61  Instance: /top
+# Saving coverage database on exit...
+# End time: 01:47:04 on Aug 31,2025, Elapsed time: 0:07:02
+# Errors: 0, Warnings: 1
